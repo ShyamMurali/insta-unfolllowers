@@ -54,8 +54,7 @@ el=driver.find_element_by_xpath('/html/body/div[1]/section/main/div/header/secti
 el.click()
 followers_count=int(el.text.split(" ")[0])
 print('checking followers... totalcount to parse:',followers_count)
-time.sleep(1)
-foll=""     
+time.sleep(1)     
 while(True):
     h1=driver.execute_script('''
     var element= document.evaluate('/html/body/div[5]/div/div/div[2]', document, null, XPathResult.FIRST_ORDERED_NODE_TYPE, null).singleNodeValue;
